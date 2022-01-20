@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>MyPlayList</title>
+    <link rel="stylesheet" href="master.css">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async
       src="https://www.googletagmanager.com/gtag/js?id=G-ZYQCZP51SH">
@@ -21,23 +23,38 @@
   </head>
 
   <body>
-    <h1 style="margin-bottom:40px;">My PlayList</h1>
+    <h1>
+      MyPlayList</h1>
     <h2>내가 좋아하는 앨범듣기</h2>
-    <ul>
-      <li style="margin-bottom:10px;">
-        <a href="phs/phs_7th_I am A Dreamer.html">박효신 7집 [I am A
-          Dreamer]</a>
-      </li>
-      <li style="margin-bottom:10px;">
-        <a href="IU/IU_2th_Last Fantage.html">아이유 정규 2집 [Last
-          Fantage]</a>
-      </li>
-      <li>
-        <a href="Million Eyes/Million Eyes_In The Wind.html">Million
-          Eyes 3th
-          Album [In The Wind]</a>
-      </li>
-    </ul>
+    <div id="grid">
+      <ul>
+        <li>
+          <a href="phs/phs_7th_I am A Dreamer.html">박효신 7집
+            [I am A
+            Dreamer]</a>
+        </li>
+        <li>
+          <a href="IU/IU_2th_Last Fantage.html">아이유
+            정규 2집
+            [Last
+            Fantage]</a>
+        </li>
+        <li>
+          <a href="Million Eyes/Million Eyes_In The Wind.html">Million
+            Eyes 3th Album<br>
+            [In The Wind]</a>
+        </li>
+      </ul>
+      <div id="contents">
+        <div class="main_img">
+          <img
+            src="https://i.pinimg.com/originals/12/c3/7c/12c37c960be0992dedd9368583dc83c2.gif">
+        </div>
+        <p>
+          내가 좋아하는 음악 모아듣기용 페이지입니다.
+        </p>
+      </div>
+    </div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
