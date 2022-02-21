@@ -4,17 +4,39 @@ body {
 
 h1 {
   font-size: 50px;
-  text-align: center;
-  border-bottom: 1px solid gray;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   padding: 30px;
+  border-bottom: 1px solid gray;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.button_container {
+  position: absolute;
+  right: 30px;
+}
+
+.button1 {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 100%;
+  font-size: 16px;
+  width: 80px;
+  height: 50px;
+  margin-right: -5px;
 }
 
 h2 {
   border-bottom: 1px solid gray;
   padding: 25px;
   margin: 0;
-
 }
 
 h3 {
@@ -72,13 +94,12 @@ li {
   padding: 0px 24px;
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   #grid {
     display: block;
   }
 
   #grid ol {
-
     border-right: none;
     height: auto;
     width: auto;
@@ -89,4 +110,8 @@ li {
     text-align: center;
   }
 
+  .button1 {
+    width: 60px;
+    height: 30px;
+  }
 }

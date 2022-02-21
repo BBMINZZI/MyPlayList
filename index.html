@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="colors.js"></script>
     <title>MyPlayList</title>
     <link rel="stylesheet" href="master.css">
 
@@ -27,18 +28,7 @@
     <h1>MyPlayList</h1>
     
       <div class="button_container">
-        <input type="button" value="Night" class="button1" onclick="
-        if(document.querySelector('body').dataset.mode === 'Day'){
-          document.querySelector('body').style.backgroundColor = 'black';
-          document.querySelector('body').style.color = 'white';
-          document.querySelector('body').dataset.mode = 'Night';
-          this.value = 'Day';
-        } else {
-          document.querySelector('body').style.backgroundColor = 'white';
-          document.querySelector('body').style.color = 'black';
-          document.querySelector('body').dataset.mode = 'Day';
-          this.value = 'Night';
-        } ">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
       </div>
     </div>
 
