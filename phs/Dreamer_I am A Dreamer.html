@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>The Dreamer (I am A Dreamer) - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,12 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
 
@@ -88,7 +94,8 @@
           </tbody>
         </table>
 
-        <p style="margin-top:30px;">
+        <div class="lyrics">
+        <p>
           벽에 닿은 그림자 해가 뜬 줄 모르고<br>
           꿈을 꾸던 아이는<br>
           달이 떠난 자리에 그 별이 빛나지 않아<br>
@@ -129,6 +136,7 @@
             이 세상의 난<br>
             난 이미 누군가의 별</strong>
         </p>
+        </div>
       </div>
     </div>
 

@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>Wonderland - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,13 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
+    
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
 
@@ -90,7 +97,7 @@
           </tbody>
         </table>
 
-        <p style="margin-top:30px;">
+        <p class="lyrics">
           Find me as you do<br>
           Paint a sunrise<br>
           with the creamin' velvet blue<br>

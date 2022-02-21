@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>야생화 - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,13 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
+
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
 
@@ -91,7 +98,7 @@
           </tbody>
         </table>
 
-        <p style="margin-top:30px;">
+        <p class="lyrics">
           하얗게 피어난 얼음 꽃 하나가<br>
           달가운 바람에 얼굴을 내밀어<br>
           아무 말 못했던 이름도 몰랐던<br>

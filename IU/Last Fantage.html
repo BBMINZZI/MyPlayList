@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,13 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
+
     <h2><a href="./IU_2th_Last Fantage.html">아이유 정규 2집 [Last
         Fantage]</a></h2>
 
@@ -62,7 +69,8 @@
 
         <h3>Last Fantage</h3>
         <h4>아이유</h4>
-        <table style="margin-bottom:30px;">
+
+        <table>
           <tbody>
             <tr>
               <td>작사</td>
@@ -78,6 +86,8 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="lyrics">
         <p>
           좋은 꿈을 꿨죠<br>
           어느 꽃보다 아름다운<br>
@@ -132,6 +142,7 @@
           기도해줘요 넘어지지 않도록<br>
           나를 믿어요
         </p>
+        </div>
       </div>
     </div>
 

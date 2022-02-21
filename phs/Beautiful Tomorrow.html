@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>Beautiful Tomorrow - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,13 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
+
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
 
@@ -89,7 +96,8 @@
           </tbody>
         </table>
 
-        <p style="margin-top:30px;">
+        <div class="lyrics">
+        <p>
           그려지지 않아<br>
           눈을 감고 있어도<br>
           그렇게나 사랑하고<br>
@@ -144,6 +152,7 @@
           그 날 그대로 여기 남아 있을게 여기<br>
           <u>Because of you</u>
         </P>
+        </div>
       </div>
     </div>
 

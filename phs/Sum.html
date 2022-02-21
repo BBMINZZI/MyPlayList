@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>숨 - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,12 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
 
@@ -90,7 +96,8 @@
           </tbody>
         </table>
 
-        <p style="margin-top:30px;">
+        <div class="lyrics">
+        <p>
           오늘 하루 쉴 숨이<br>
           오늘 하루 쉴 곳이<br>
           오늘만큼 이렇게<br>
@@ -150,6 +157,7 @@
           <u>고단했던 내 하루가<br>
             숨을 쉰다<u>
         </p>
+        </div>
       </div>
     </div>
 

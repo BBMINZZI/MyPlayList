@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>Li-La (리라) - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,12 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
 
@@ -91,7 +97,8 @@
           </tbody>
         </table>
 
-        <p style=" margin-top:30px;">
+        <div class="lyrics">
+        <p>
           그저 보는 거 말고 아름다운 걸 보려고<br>
           그저 듣는 거 말고 소중한 걸 들으려고<br>
           쉬운 길을 두고도 돌아왔네
@@ -141,6 +148,7 @@
           그래 태양보다 찬란하게 빛 날 그 날에<br>
           눈이 부실지라도 앞만 보리라
         </p>
+        </div>
       </div>
     </div>
 

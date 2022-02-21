@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>너랑나 - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,13 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
+
     <h2><a href="./IU_2th_Last Fantage.html">아이유 정규 2집 [Last
         Fantage]</a></h2>
 
@@ -61,7 +68,8 @@
 
         <h3>너랑나</h3>
         <h4>아이유</h4>
-        <table style="margin-bottom:30px;">
+
+        <table>
           <tbody>
             <tr>
               <td>작사</td>
@@ -77,6 +85,8 @@
             </tr>
           </tbody>
         </table>
+      
+      <div class="lyrics">
         <p>
           시곌 보며 속삭이는 비밀들<br>
           간절한 내 맘속 이야기<br>
@@ -121,6 +131,7 @@
             너를 알아볼 수 있게<br>
             내 이름을 불러줘</strong>
         </p>
+        </div>
       </div>
     </div>
     <div id="disqus_thread"></div>

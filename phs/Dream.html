@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>꿈 - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,9 +23,16 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
+
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
+
     <div id="grid">
       <ol>
         <li><a href="Home.html" title="'HOME'정보">Home</a></li>
@@ -88,7 +96,8 @@
           </tbody>
         </table>
 
-        <p style="margin-top:30px;">
+        <div class="lyrics">
+        <p>
           오늘 밤 내가 꾸고 싶은 꿈은 슬픔 없는 꿈<br>
           오늘 밤 내가 꾸고 싶은 꿈은 기억 못할 꿈
         </p>
@@ -124,6 +133,7 @@
           아직도 내가 꾸지 못한 꿈은 니가 없는 꿈<br>
           아직도 내가 꾸지 못한 꿈은 꿈이 아닌 꿈
         </p>
+        </div>
       </div>
     </div>
 

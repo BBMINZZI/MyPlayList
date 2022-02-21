@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <script src="../colors.js"></script>
     <title>I'm Your Friend - MyPlayList</title>
     <link rel="stylesheet" href="../music.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +23,13 @@
   </head>
 
   <body>
-    <h1><a href="../index.html">MyPlayList</a></h1>
+    <div class="header">
+      <h1><a href="../index.html">MyPlayList</a></h1>
+      <div class="button_container">
+        <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
+      </div>
+    </div>
+
     <h2><a href="./phs_7th_I am A Dreamer.html">박효신 7집 [I am A
         Dreamer]</a></h2>
 
@@ -90,7 +97,8 @@
           </tbody>
         </table>
 
-        <p style="margin-top:30px;">
+        <div class="lyrics">
+        <p>
           밤 하늘 반짝이는 별 하나<br>
           근데 외롭지는 않니<br>
           너도 매일 밤 기다리니<br>
@@ -155,6 +163,7 @@
         <p>
           <u>오늘 밤 반짝이는 너와 나</u>
         </p>
+        </div>
       </div>
     </div>
 

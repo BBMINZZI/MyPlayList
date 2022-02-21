@@ -50,6 +50,10 @@ img {
   margin-right: auto;
 }
 
+.artist {
+  margin-top: 30px;
+}
+
 li {
   margin: 10px;
 }
