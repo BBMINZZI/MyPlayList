@@ -1,5 +1,3 @@
-const target = document.querySelector('body');
-
 const Links = {
     setColor: (color) => {
         const anchor_tags = document.querySelectorAll('a');
@@ -12,14 +10,14 @@ const Links = {
 const Body = {
     // arrow function (=>)은 function() {}과 같다.
     setColor: (color) => {
-        target.style.color = color;
+        document.querySelector('body').style.color = color;
     },
     setBackgroundColor: (color) => {
-        target.style.backgroundColor = color;
+        document.querySelector('body').style.backgroundColor = color;
     }
 }
 
-function changeStyleByTheme(bgColor, color, value) {
+function changeStyleByTheme(bgColor, color, value, self) {
     Body.setBackgroundColor(bgColor); 
     Body.setColor(color);
     self.value = value;
@@ -30,6 +28,6 @@ function NightDayHandler(self) {
     const param = self.value === 'Night' ?  
         ['black', 'white', 'Day'] : 
         ['white', 'black', 'Night'];
-    changeStyleByTheme(...param);
+    changeStyleByTheme(...param, self);
 }
 

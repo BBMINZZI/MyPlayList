@@ -1,37 +1,39 @@
-var Links = {
-    setColor :  function (color) {
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while (i < alist.length) {
-            alist[i].style.color = color;
-            i = i + 1;
-        }
+
+const Links = {
+    setColor: (color) => {
+        const anchor_tags = document.querySelectorAll('a');
+        anchor_tags.forEach((anchor_tag) => {
+            if (anchor_tag.classList.contains('visit')) {
+                anchor_tag.style.color = document.querySelector('body').style.backgroundColor === 'black' ? '#DA3DFF' : 'purple';
+                return;
+            }
+
+            anchor_tag.style.color = color;
+        });
     }
 }
 
-var Body = {
-    setColor : function (color) {
+const Body = {
+    // arrow function (=>)은 function() {}과 같다.
+    setColor: (color) => {
         document.querySelector('body').style.color = color;
     },
-    setBackgroundColor : function (color) {
+    setBackgroundColor: (color) => {
         document.querySelector('body').style.backgroundColor = color;
     }
 }
+
+function changeStyleByTheme(bgColor, color, value, self) {
+    Body.setBackgroundColor(bgColor); 
+    Body.setColor(color);
+    self.value = value;
+    Links.setColor(color);
+}
       
 function NightDayHandler(self) {
-    var target = document.querySelector('body');
-    if (self.value === 'Night') {
-        Body.setBackgroundColor('black'); 
-        Body.setColor('white');
-        self.value = 'Day';
-
-        Links.setColor('white');
-        
-    } else {
-        Body.setBackgroundColor('white');
-        Body.setColor('black');
-        self.value = 'Night';
-
-        Links.setColor('black');
-    }
+    const param = self.value === 'Night' ?  
+        ['black', 'white', 'Day'] : 
+        ['white', 'black', 'Night'];
+    changeStyleByTheme(...param, self);
 }
+
