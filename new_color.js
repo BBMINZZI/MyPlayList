@@ -1,13 +1,7 @@
-
 const Links = {
     setColor: (color) => {
         const anchor_tags = document.querySelectorAll('a');
         anchor_tags.forEach((anchor_tag) => {
-            if (anchor_tag.classList.contains('visit')) {
-                anchor_tag.style.color = document.querySelector('body').style.backgroundColor === 'black' ? '#DA3DFF' : 'purple';
-                return;
-            }
-
             anchor_tag.style.color = color;
         });
     }
