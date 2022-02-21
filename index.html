@@ -1,13 +1,52 @@
 <!doctype html>
 <html>
 
+<!-- 
+  브라우저가 html을 그려내는 순서
+
+  html을 분석, head, body를 찾아서 파악 
+  head에서 link요소를 파악, 거기있는 미리 불러낸다.
+  css의 경우 cssom으로 처리한다.
+
+  body가 본체기때문에 body를 효율적으로 그리기위해 tree 구조라는 것을 사용한다.
+
+  근데 link 태그 body안에다가 넣으면 안되?
+
+  body <- 마진: 0
+    * div.header 
+      - h1
+        - text:MyPlayList
+
+      - div.button_container
+        - input.button1
+
+    * h2
+      - text:내가 좋아하는 앨범듣기
+    
+    * div#grid
+      - ul
+        - li
+          - a
+            - text: 박효신 7집 [I am A Dreamer]
+        - li
+          - a
+            - text: 아이유 정규 2집 [Last Fantage]
+        - li
+          - a
+            - text: Million Eyes 3th Album [In The Wind]
+      - div#content
+        - div.main_img
+          - img
+        - p
+          - text: 내가 좋아하는 음악 모아듣기용 페이지입니다.
+    * script (메신저)
+    * script (color.js)
+ -->
+
   <head>
     <meta charset="utf-8">
-    <script src="colors.js"></script>
-    <title>MyPlayList</title>
+    <!-- css나 폰트등을 불러오는 link는 왜 head안에 넣어야 될까? -->
     <link rel="stylesheet" href="master.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async
       src="https://www.googletagmanager.com/gtag/js?id=G-ZYQCZP51SH">
     </script>
@@ -21,35 +60,27 @@
 
       gtag('config', 'G-ZYQCZP51SH');
     </script>
+    <title>MyPlayList</title>
   </head>
 
   <body>
     <div class="header">
-    <h1>MyPlayList</h1>
-    
+      <h1>MyPlayList</h1>
       <div class="button_container">
         <input type="button" value="Night" class="button1" onclick="NightDayHandler(this)">
       </div>
     </div>
-
     <h2>내가 좋아하는 앨범듣기</h2>
     <div id="grid">
       <ul>
         <li>
-          <a href="phs/phs_7th_I am A Dreamer.html">박효신 7집
-            [I am A
-            Dreamer]</a>
+          <a href="phs/phs_7th_I am A Dreamer.html">박효신 7집 [I am A Dreamer]</a>
         </li>
         <li>
-          <a href="IU/IU_2th_Last Fantage.html">아이유
-            정규 2집
-            [Last
-            Fantage]</a>
+          <a href="IU/IU_2th_Last Fantage.html">아이유 정규 2집 [Last Fantasy]</a>
         </li>
         <li>
-          <a href="Million Eyes/Million Eyes_In The Wind.html">Million
-            Eyes 3th Album<br>
-            [In The Wind]</a>
+          <a href="Million Eyes/Million Eyes_In The Wind.html">Million Eyes 3th Album<br> [In The Wind]</a>
         </li>
       </ul>
       <div id="contents">
@@ -58,9 +89,7 @@
             src="https://i.pinimg.com/originals/12/c3/7c/12c37c960be0992dedd9368583dc83c2.gif"
             alt="레코드이미지" aria-label="레코드이미지">
         </div>
-        <p>
-          내가 좋아하는 음악 모아듣기용 페이지입니다.
-        </p>
+        <p>내가 좋아하는 음악 모아듣기용 페이지입니다.</p>
       </div>
     </div>
     <!--Start of Tawk.to Script-->
@@ -78,7 +107,11 @@
         s0.parentNode.insertBefore(s1, s0);
       })();
     </script>
-    <!--End of Tawk.to Script-->
+    <!-- 자바스크립트는 코드를 분석해서 읽을때까지 렌더링을 하지 않음 -->
+    <!-- 파싱 차단 요소라고 불리는데, 자바스크립트 코드가 많아서 불러오는데 시간이 걸린다면? -->
+    <!-- 유저는 흰화면을 보게된다. -->
+    <!-- 그래서 가급적 body 닫는 태그 위에, 스크립트 로드하는 코드를 추가해둔다. -->
+    <script src="colors.js"></script>
   </body>
 
 </html>

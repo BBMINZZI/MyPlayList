@@ -48,6 +48,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  /* 아래처럼 축약해서 사용가능하다. (권장사항) */
+  /* margin: 0 auto; */
 }
 
 .artist {
